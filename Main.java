@@ -46,7 +46,7 @@ public class Main {
                     ListText.add("Cagent" + y + ".txt");
                     outAgent.close();
                 }
-                out.write("<li><a href='html/Cagent/" + ListText.get(i) + ".html'>" + line + "</a></li>");
+                out.write("<li><a href='html/Cagent/" + ListText.get(i) + ".php'>" + line + "</a></li>");
                 i++;
             }
             out.write("</body>");
@@ -74,7 +74,7 @@ public class Main {
                     FileOutputStream fs2 = new FileOutputStream("html/Cagent/" + FileName + ".php");
                     OutputStreamWriter out2 = new OutputStreamWriter(fs2);
                     boolean check = false;
-                    out2.write("<?php include 'html/Agent/listeAgents.html';?>");
+                    out2.write("<?php include 'headerAgents.html';?>");
                     while ((line3 = br3.readLine()) != null) {
                         for(String equip : ListEquipement)
                         {
@@ -96,7 +96,7 @@ public class Main {
                             out2.write("<li>" + equip + "<input type='checkbox' id='scales'><br></li> ");
                         }
                     }
-                    System.out.println(out2);
+                    out2.write("<?php include 'footerAgents';?>");
                     out2.close();
 
                 }
