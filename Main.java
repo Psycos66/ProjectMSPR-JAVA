@@ -7,7 +7,7 @@ public class Main {
     public static void main(String[] args) {
 
         List<String>ListText = new ArrayList<>();
-        File repertoire = new File("html/Cagent/FichierTXT");
+        File repertoire = new File("sauvegarde/Cagent");
         String liste[] = repertoire.list();
 
         if (liste != null) {
@@ -22,7 +22,6 @@ public class Main {
         {
             System.out.println(FileName);
         }
-
 
         String file = "sauvegarde/Agent/agent.txt";
         String file2 = "sauvegarde/Equipement/equipement.txt";
@@ -40,6 +39,13 @@ public class Main {
             int i = 0;
             while ((line = br.readLine()) != null) {
                 System.out.println(line);
+                if(ListText.size() <= i) {
+                    int y = i+1;
+                    FileOutputStream fsAgent = new FileOutputStream("sauvegarde/Cagent/Cagent" + y + ".txt");
+                    OutputStreamWriter outAgent = new OutputStreamWriter(fsAgent);
+                    ListText.add("Cagent" + y + ".txt");
+                    outAgent.close();
+                }
                 out.write("<li><a href='html/Cagent/" + ListText.get(i) + ".html'>" + line + "</a></li>");
                 i++;
             }
@@ -61,14 +67,14 @@ public class Main {
             {
                 for(String FileName : ListText)
                 {
-                    String file3 = "html/Cagent/Cagent" + FileName;
+                    String file3 = "sauvegarde/Cagent/" + FileName;
                     BufferedReader br3 = new BufferedReader(new FileReader(file3));
                     String line3;
 
-                    FileOutputStream fs2 = new FileOutputStream("html/Cagent/Cagent/" + FileName + ".html");
+                    FileOutputStream fs2 = new FileOutputStream("html/Cagent/" + FileName + ".php");
                     OutputStreamWriter out2 = new OutputStreamWriter(fs2);
                     boolean check = false;
-
+                    out2.write("<?php include 'html/Agent/listeAgents.html';?>");
                     while ((line3 = br3.readLine()) != null) {
                         for(String equip : ListEquipement)
                         {
@@ -83,7 +89,6 @@ public class Main {
                             check = true;
                         }
                     }
-
                     if(!check)
                     {
                         for(String equip : ListEquipement)
@@ -91,6 +96,7 @@ public class Main {
                             out2.write("<li>" + equip + "<input type='checkbox' id='scales'><br></li> ");
                         }
                     }
+                    System.out.println(out2);
                     out2.close();
 
                 }
@@ -98,7 +104,7 @@ public class Main {
             }
             catch (IOException e)
             {
-
+                System.out.println("An error occurred :" + e);
             }
         }
 
