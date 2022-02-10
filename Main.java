@@ -28,6 +28,7 @@ public class Main {
         String file2 = "sauvegarde/Equipement/equipement.txt";
 
         List<String>ListEquipement = new ArrayList<>();
+        List<String>ListAgent = new ArrayList<>();
 
         try(BufferedReader br = new BufferedReader(new FileReader(file)))
         {
@@ -40,14 +41,19 @@ public class Main {
             int i = 0;
             while ((line = br.readLine()) != null) {
                 System.out.println(line);
-                if(ListText.size() <= i) {
-                    int y = i+1;
-                    FileOutputStream fsAgent = new FileOutputStream("sauvegarde/Cagent/Cagent" + y + ".txt");
-                    OutputStreamWriter outAgent = new OutputStreamWriter(fsAgent);
-                    ListText.add("Cagent" + y + ".txt");
-                    outAgent.close();
+                ListAgent.add(line);
+                for(String FileName : ListText) {
+                    if (ListText.size() <= i) {
+                        int y = i + 1;
+                        FileOutputStream fsAgent = new FileOutputStream("sauvegarde/Cagent/C" + FileName + ".txt");
+                        OutputStreamWriter outAgent = new OutputStreamWriter(fsAgent);
+                        ListText.add("Cagent" + y + ".txt");
+                        outAgent.close();
+                    }
+                    if(line==FileName) {
+                        out.write("<li><a href='html/Cagent/" + ListText.get(i) + ".php'>" + line + "</a></li>");
+                    }
                 }
-                out.write("<li><a href='html/Cagent/" + ListText.get(i) + ".php'>" + line + "</a></li>");
                 i++;
             }
             out.write("</body>");
