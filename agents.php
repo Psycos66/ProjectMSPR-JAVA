@@ -76,7 +76,7 @@
     <footer>
         <div class="social" style="color:#FFFFFF;"><a href="https://github.com/Psycos66/ProjectMSPR-JAVA"><i
                         class="icon ion-social-github"></i></a></div>
-        <p class="copyright">Julien Seux, Killian Billard, Mathis Belin, Clément Moreau</p>
+        <p class="copyright">Julien Seux, Kilian Billard, Mathis Belin, Clément Moreau</p>
         <p class="copyright"> © 2022 </p>
     </footer>
 </div>
