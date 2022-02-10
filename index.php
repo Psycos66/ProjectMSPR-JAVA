@@ -18,11 +18,11 @@
     align-items: center; ">
     <h1 style=" font-size:medium; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; margin-right:auto; margin-left:auto;">Agents de sécurité
     </h1>
-    <img src="../asset/image/R.png" style="border-radius:10px; margin-bottom:5px; border: 2px solid #659224; padding:5px; max-width:5rem;"/>
-</div>
+    <img src="image/asset/image/R.png" style="border-radius:10px; margin-bottom:5px; border: 2px solid #659224; padding:5px; max-width:5rem;"/>
+</div>  
     <div style="border: 2px solid #379EC1; border-radius:10px;padding:30px;">
     <?php
-    include '../Agent/listeAgents.html';
+    include 'html/Agent/listeAgents.html';
     ?> 
     </div>
     
