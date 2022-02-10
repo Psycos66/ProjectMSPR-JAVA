@@ -39,11 +39,13 @@ public class Main {
 
             out.write("<html>");
             out.write("<body>");
-
+            int i = 0;
             while ((line = br.readLine()) != null) {
                 System.out.println(line);
                 out.write("<li><a href='file:///html/Cagent/Cagent" + y + ".html'>" + line + "</a></li>");
                 y++;
+                out.write("<li><a href='html/Cagent/" + ListText.get(i) + ".html'>" + line + "</a></li>");
+                i++;
             }
             out.write("</body>");
             out.write("</html>");
@@ -69,6 +71,7 @@ public class Main {
 
                     FileOutputStream fs2 = new FileOutputStream("html/Cagent/Cagent/" + FileName + ".html");
                     OutputStreamWriter out2 = new OutputStreamWriter(fs2);
+                    boolean check = false;
 
                     while ((line3 = br3.readLine()) != null) {
                         for(String equip : ListEquipement)
@@ -81,7 +84,19 @@ public class Main {
                             {
                                 out2.write("<li>" + equip + "<input type='checkbox' id='scales'><br></li> ");
                             }
+                            check = true;
                         }
+                    }
+
+                    if(!check)
+                    {
+                        for(String equip : ListEquipement)
+                        {
+                            out2.write("<li>" + equip + "<input type='checkbox' id='scales'><br></li> ");
+                        }
+                    }
+
+                }
                     }
                     out2.close();
                 }
