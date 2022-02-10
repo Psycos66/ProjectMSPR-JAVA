@@ -6,6 +6,7 @@ public class Main {
 
     public static void main(String[] args) {
 
+        //Récupération des fichiers
         List<String>ListText = new ArrayList<>();
         File repertoire = new File("html/Cagent/FichierTXT");
         String liste[] = repertoire.list();
