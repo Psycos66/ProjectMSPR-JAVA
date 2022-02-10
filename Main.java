@@ -32,18 +32,14 @@ public class Main {
         try(BufferedReader br = new BufferedReader(new FileReader(file)))
         {
             String line;
-            int y = 1;
             FileOutputStream fs = new FileOutputStream("html/Agent/listeAgents.html");
             OutputStreamWriter out = new OutputStreamWriter(fs);
-
 
             out.write("<html>");
             out.write("<body>");
             int i = 0;
             while ((line = br.readLine()) != null) {
                 System.out.println(line);
-                out.write("<li><a href='file:///html/Cagent/Cagent" + y + ".html'>" + line + "</a></li>");
-                y++;
                 out.write("<li><a href='html/Cagent/" + ListText.get(i) + ".html'>" + line + "</a></li>");
                 i++;
             }
