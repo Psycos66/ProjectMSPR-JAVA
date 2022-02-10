@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr" >
+<html lang="fr">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -13,15 +13,19 @@
     <link rel="stylesheet" href="assets/css/bootstrap4.min.css">
     <link rel="stylesheet" href="assets/css/mainv2.css">
     <link rel="stylesheet" href="assets/css/wireframe-theme.min.css">
-    <script>document.createElement( "picture" );</script>
+    <script>document.createElement("picture");</script>
     <script class="picturefill" async="async" src="assets/js/picturefill.min.js"></script>
     <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,b%7CRoboto+Condensed:300,400,b%7CRoboto:300,400,b">
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Montserrat:400,b%7CRoboto+Condensed:300,400,b%7CRoboto:300,400,b">
 </head>
 <body>
 <div class="row nav-row">
     <div class="col-xs-12">
-        <div class="container-fluid nav-container"><a href="index.php" class="responsive-picture logo" title="EPSI LOGO"><picture><img alt="EPSI" src="assets/image/logoepsi-400x400.png"></picture></a>
+        <div class="container-fluid nav-container"><a href="index.php" class="responsive-picture logo"
+                                                      title="EPSI LOGO">
+                <picture><img alt="EPSI" src="assets/image/logoepsi-400x400.png"></picture>
+            </a>
             <a class="link-text nav-link2" href="agents.php" title="Liste des agents">Liste des agents</a>
             <a class="link-text nav-link2" href="index.php" title="Espace Eleve">Présentation du projet</a>
         </div>
@@ -45,9 +49,11 @@
     width: 100%;
     justify-content: center;
     align-items: center; ">
-        <h1 style=" font-size:medium; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; margin-right:auto; margin-left:auto;">Agents de sécurité
+        <h1 style=" font-size:medium; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; margin-right:auto; margin-left:auto;">
+            Agents de sécurité
         </h1>
-        <img src="assets/image/ecusson-rond-securite-privee.jpg" style="border-radius:10px; margin-bottom:5px; border: 2px solid #659224; padding:5px; max-width:5rem;"/>
+        <img src="assets/image/ecusson-rond-securite-privee.jpg"
+             style="border-radius:10px; margin-bottom:5px; border: 2px solid #659224; padding:5px; max-width:5rem;"/>
 
     </div>
     <div style="border: 2px solid #379EC1; border-radius:10px;padding:30px;">
@@ -68,7 +74,8 @@
 <br>
 <div class="footer-basic" style="background-color: #333333">
     <footer>
-        <div class="social" style="color:#FFFFFF;"><a href="https://github.com/Psycos66/ProjectMSPR-JAVA"><i class="icon ion-social-github"></i></a></div>
+        <div class="social" style="color:#FFFFFF;"><a href="https://github.com/Psycos66/ProjectMSPR-JAVA"><i
+                        class="icon ion-social-github"></i></a></div>
         <p class="copyright">Julien Seux, Killian Billard, Mathis Belin, Clément Moreau</p>
         <p class="copyright"> © 2022 </p>
     </footer>

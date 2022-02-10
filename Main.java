@@ -96,7 +96,7 @@ public class Main {
                             out2.write("<li>" + equip + "<input type='checkbox' id='scales'><br></li> ");
                         }
                     }
-                    out2.write("<?php include '../../footerAgents';?>");
+                    out2.write("<?php include '../../footerAgents.html';?>");
                     out2.close();
 
                 }
