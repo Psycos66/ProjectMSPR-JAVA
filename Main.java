@@ -95,11 +95,10 @@ public class Main {
                             out2.write("<li>" + equip + "<input type='checkbox' id='scales'><br></li> ");
                         }
                     }
+                    out2.close();
 
                 }
-                    }
-                    out2.close();
-                }
+                    
             }
             catch (IOException e)
             {
