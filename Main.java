@@ -50,9 +50,10 @@ public class Main {
                         ListText.add("Cagent" + y + ".txt");
                         outAgent.close();
                     }
-                    if(line==FileName) {
+                    //String tmp = line+".txt";
+                    //if(tmp ==FileName) {
                         out.write("<li><a href='html/Cagent/" + ListText.get(i) + ".php'>" + line + "</a></li>");
-                    }
+                    //}
                 }
                 i++;
             }
