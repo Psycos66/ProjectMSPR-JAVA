@@ -38,20 +38,24 @@ public class Main {
 
             out.write("<html>");
             out.write("<body>");
+
             int i = 0;
+            int tailleList = 0;
+
+            for(String FileName : ListText) {
+                if (ListText.size() <= i) {
+                    int y = tailleList + 1;
+                    FileOutputStream fsAgent = new FileOutputStream("sauvegarde/Cagent/C" + FileName + ".txt");
+                    OutputStreamWriter outAgent = new OutputStreamWriter(fsAgent);
+                    ListText.add("Cagent" + y + ".txt");
+                    outAgent.close();
+                } 
+                tailleList++;
+            }
             while ((line = br.readLine()) != null) {
                 System.out.println(line);
                 ListAgent.add(line);
-                for(String FileName : ListText) {
-                    if (ListText.size() <= i) {
-                        int y = i + 1;
-                        FileOutputStream fsAgent = new FileOutputStream("sauvegarde/Cagent/C" + FileName + ".txt");
-                        OutputStreamWriter outAgent = new OutputStreamWriter(fsAgent);
-                        ListText.add("Cagent" + y + ".txt");
-                        outAgent.close();
-                    }
-                        out.write("<li><a href='html/Cagent/" + ListText.get(i) + ".php'>" + line + "</a></li>");  
-                }
+                out.write("<li><a href='html/Cagent/" + ListText.get(i) + ".php'>" + line + "</a></li>"); 
                 i++;
             }
             out.write("</body>");
