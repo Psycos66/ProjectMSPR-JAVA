@@ -1,5 +1,6 @@
 import java.io.*;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class Main {
@@ -41,6 +42,8 @@ public class Main {
 
             int i = 0;
             int tailleList = 0;
+            
+            Collections.sort(ListText);
 
             for(String FileName : ListText) {
                 if (ListText.size() <= i) {
